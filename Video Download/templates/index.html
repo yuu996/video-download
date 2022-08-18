@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+
+    <title>YouTubeDownload</title>
+</head>
+<body>
+    <h1 class="title">動画ダウンロード</h1>
+    
+    <form method="post" autocomplete="off">
+        <div class="input-group mb-3">
+            <input type="url" class="form-control" placeholder="動画のURLを入力" aria-label="Recipient's username" name="url" aria-describedby="button-addon2" required>
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit" id="button-addon2">Download</button>
+            </div>
+          </div>
+          <p>保存先:<input type="text" class="form-control" name="savepath" value={{downloads_path}}></p>
+        <div class="radio">
+          <p>mp4 : <input type="radio" class="mp4" name="output_mode" value="mp4" checked="checked"><br></p>
+          <p>mp3 : <input type="radio" class="mp3" name="output_mode" value="mp3"></p>
+        </div> 
+    </form>
+        <p>{{ complete_dlmsg }}</p>
+</body>
+</html>
